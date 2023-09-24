@@ -10,3 +10,5 @@ def test_search(setting_browser, browser_open_google):
 def test_search_second(setting_browser, browser_open_google):
     browser.element('[name="q"]').should(be.blank).type('Шла1Саша2По3шоссе4и5сосала5сушку').press_enter()
     browser.element('[id="result-stats"]').should(have.text('Результатов: примерно 0'))
+
+    print("Поиск не дал результатов!")
